@@ -1,0 +1,24 @@
+[package]
+name = "solana-swap"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "solana_swap"
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build"]
+
+[dependencies]
+anchor-lang = "0.30.0"  # Update to match CLI version
+anchor-spl = "0.30.0"   # Ensure it matches anchor-lang
+solana-program = "2.1.14"  # Match with your installed Solana version
+
+
